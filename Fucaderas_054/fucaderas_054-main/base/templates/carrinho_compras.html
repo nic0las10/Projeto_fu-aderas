@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{% load static %}
+
+<div class="carrinho-produtos">
+    <ul>
+        {% for produto in produtos_no_carrinho %}
+        <span>{{produto.imagem_front}}</span>
+        <li>{{ produto.nome }} - Quantidade: {{ produto.quantidade }}</li>
+        {% endfor %}
+    </ul>
+  </div>

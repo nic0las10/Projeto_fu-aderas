@@ -1,0 +1,1149 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos</title>
+  <link rel="shortcut icon" href="assets/image/raio.jpg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'admin/css/app.css' %}" />
+
+
+
+</head>
+
+<header class="header">
+  <div class="header-top">
+    <div class="header-top-container">
+
+      <div class="header-user-top-menu">
+        <span><i class="fas fa-user"></i><a href="#">Minha Conta</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="main-header-container">
+      <a href="#" id="brand">Fuçaderas_054 <i class="fas fa-bolt"></i></a>
+      <form id="search-form">
+        <input type="text" name="search" id="search" placeholder="Busque aqui" />
+        <input type="submit" name="submit" class="btn btn-half" value="Pesquisar" />
+      </form>
+      <div class="header-actions-menu">
+        <div class="wishlist-container">
+          <span class="qty">0</span>
+          <i class="far fa-heart"></i>
+          <a href="#">Favoritos</a>
+        </div>
+        <div class="header-cart-container">
+          <span class="qty">0</span>
+          <i class="fas fa-shopping-cart"></i>
+          <a href="#">Carrrinho</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <nav>
+      <ul>
+        <li>
+          <a href="http://127.0.0.1:8000/">Início</a>
+        </li>
+        <li>
+          <a href="http://127.0.0.1:8000/produtos/">Produtos</a>
+        </li>
+        <li>
+          <a href="/Galeria/Galeria.html">Galeria</a>
+        </li>
+        <li>
+          <a href="#+ Informações">+ Informações</a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="products-grid">
+  <h2 id="Camisetas"> Camisetas</h2>
+  <div class="products-grid-container">
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Camiseta_Fem_Front.jpg', '../static/admin/img/Camiseta_Fem_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Camiseta_Fem_Front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Camiseta_Fem_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/camiset_Preta_Masc_front.jpg', '../static/admin/img/camiset_preta_back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/camiset_Preta_Masc_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/camiset_preta_back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/camiset_branca_Masc_front.jpg', '../static/admin/img/camiset_branca_Masc.beck.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/camiset_branca_Masc_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/camiset_branca_Masc.beck.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Camiseta_Fé_Azul_front.jpg', '../static/admin/img/Camiseta_Fé_Azul_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Camiseta_Fé_Azul_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Camiseta_Fé_Azul_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="products-grid">
+
+  <div class="products-grid-container">
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Camiseta_Fé_Branc_Front.jpg', '../static/admin/img/Camiseta_Fé_Branc_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Camiseta_Fé_Branc_Front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Camiseta_Fé_Branc_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Camiseta_Fé_Pret_front.jpg', '../static/admin/img/Camiseta_Fé_Pret_back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Camiseta_Fé_Pret_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Camiseta_Fé_Pret_back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Camiseta_Fé_Branc_Fem_Front.jpg', '../static/admin/img/Camiseta_Fé_Branc_Fem_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Camiseta_Fé_Branc_Fem_Front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Camiseta_Fé_Branc_Fem_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="products-grid">
+  <h2 id="Jaquetas"> Jaquetas</h2>
+  <div class="products-grid-container">
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Corta_Vento/Corta_branc_front.jpg', '../static/admin/img/Corta_Vento/Corta_branc_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Corta_Vento/Corta_branc_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Corta_Vento/Corta_branc_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Corta_Vento/Corta_Preta_Fe_front.jpg', '../static/admin/img/Corta_Vento/Corta_Preta_Fe_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Corta_Vento/Corta_Preta_Fe_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Corta_Vento/Corta_Preta_Fe_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Corta_Vento/Corta_branc_Fe_Fmin_front.jpg', '../static/admin/img/Corta_Vento/Corta_branc_Fe_Femin_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Corta_Vento/Corta_branc_Fe_Fmin_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Corta_Vento/Corta_branc_Fe_Femin_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Corta_Vento/Corta_branc_Fe_front.jpg', '../static/admin/img/Corta_Vento/Corta_branc_Fe_back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Corta_Vento/Corta_branc_Fe_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Corta_Vento/Corta_branc_Fe_back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="products-grid">
+  <h2 id="Moletons"> Moletons</h2>
+  <div class="products-grid-container">
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Moletons/Molet_Branc_front.jpg', '../static/admin/img/Moletons/Molet_Branc_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Moletons/Molet_Branc_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Moletons/Molet_Branc_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Moletons/Molet_pret_front.jpg', '../static/admin/img/Moletons/Molet_pret_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Moletons/Molet_pret_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Moletons/Molet_pret_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Moletons/Molet_Branc_Fe_Femin_front.jpg', '../static/admin/img/Moletons/Molet_Branc_Fe_Femin_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Moletons/Molet_Branc_Fe_Femin_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Moletons/Molet_Branc_Fe_Femin_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Moletons/Molet_Branc_Fe_Femin_front.jpg', '../static/admin/img/Moletons/Molet_Branc_Fe_Femin_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Moletons/Molet_Branc_Fe_Femin_front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Moletons/Molet_Branc_Fe_Femin_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="products-grid">
+  <h2 id="Adesivos"> Adesivos</h2>
+  <div class="products-grid-container">
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Adesivos/AdesivoFuçadeiras1.jpeg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Adesivos/AdesivoFuçadeiras1.jpeg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Adesivos/AdesivoFuçadeiras1.jpeg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Adesivos/AdesivoMotorFuçado.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Adesivos/AdesivoMotorFuçado.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Adesivos/AdesivoMotorFuçado.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Adesivos/Modelo1.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Adesivos/Modelo1.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Adesivos/Modelo1.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Adesivos/AdesivoFuçadeiras1.jpeg')">
+    
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Adesivos/Modelo3.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Adesivos/Modelo3.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+    
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+    
+    
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+    
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Adesivos/Modelo2.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Adesivos/Modelo2.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Adesivos/Modelo2.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+  </div>
+ 
+  </div>
+</div>
+<div class="products-grid">
+  <h2 id="Combos"> Combos</h2>
+  <div class="products-grid-container">
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Camiseta_Fem_Front.jpg', '../static/admin/img/Camiseta_Fem_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Camiseta_Fem_Front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Camiseta_Fem_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+    <div class="products-grid-card">
+      <div class="products-grid-card"
+        onclick="openModal('../static/admin/img/Camiseta_Fem_Front.jpg', '../static/admin/img/Camiseta_Fem_Back.jpg')">
+
+        <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/admin/img/Camiseta_Fem_Front.jpg" alt="Produto 1 Front" />
+            </div>
+            <div class="flip-card-back">
+              <img src="../static/admin/img/Camiseta_Fem_Back.jpg" alt="Produto 1 Back" />
+            </div>
+          </div>
+        </div>
+
+        <p class="category">Camisetas</p>
+        <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+        <p class="product-price">R$ 69,99</p>
+
+
+        <button class="btn btn-comprar" 
+        data-id="1" 
+        data-nome="Camiseta Tradicional Rosa" 
+        data-preco="69.99"
+        data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+        data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+
+      </div>
+    </div>
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+        <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+      </div>
+    </div>
+
+  <div class="products-grid-card">
+        <div class="products-grid-card"
+          onclick="openModal('../static/admin/img/Camiseta_Fem_Front.jpg', '../static/admin/img/Camiseta_Fem_Back.jpg')">
+  
+          <div class="flip-card" onmouseover="flipCard(this)" onmouseout="resetFlip(this)">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="../static/admin/img/Camiseta_Fem_Front.jpg" alt="Produto 1 Front" />
+              </div>
+              <div class="flip-card-back">
+                <img src="../static/admin/img/Camiseta_Fem_Back.jpg" alt="Produto 1 Back" />
+              </div>
+            </div>
+          </div>
+  
+          <p class="category">Camisetas</p>
+          <h3 class="product-name">Camiseta Tradicional Rosa</h3>
+          <p class="product-price">R$ 69,99</p>
+  
+  
+          <button class="btn btn-comprar" 
+          data-id="1" 
+          data-nome="Camiseta Tradicional Rosa" 
+          data-preco="69.99"
+          data-imagem-front="../static/admin/img/Camiseta_Fem_Front.jpg"
+          data-imagem-back="../static/admin/img/Camiseta_Fem_Back.jpg">Comprar</button>
+  
+        </div>
+      </div>
+      <div id="myModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modalImageFront" src="" alt="Imagem do Produto - Front">
+          <img id="modalImageBack" src="" alt="Imagem do Produto - Back">
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="newsletter-container">
+
+  <div class="social-media">
+    <a href="https://www.facebook.com/gabriel.gabeee" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/fucaderas_054/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="chat.whatsapp.com/K4fWlCDnVX4LlODh41GW3k" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+  </div>
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-top-about">
+      <h3 id="+ Informações">Sobre</h3>
+      <p>
+        Bem-vindo à Fuçaderas_054, o seu destino definitivo para as mais emocionantes e potentes motos alteradas.
+        Fundada em 2022, somos apaixonados por proporcionar uma experiência de pilotagem única,
+        onde a potência encontra a personalização.
+      </p>
+      <p>
+        <i class="fas fa-location-arrow"></i>
+        <a href="#">Rua Sandro Tonietto,1995</a>
+      </p>
+      <p>
+        <i class="fas fa-phone"></i>
+        <a href="#">(54)99946-4972</a>
+      </p>
+      <p>
+        <i class="far fa-envelope"></i>
+        <a href="#">nicolas.macedof10@gmail.com</a>
+      </p>
+    </div>
+    <div class="footer-top-categories">
+      <h3>Produtos</h3>
+      <ul>
+        <li>
+          <a href="">Camisetas</a>
+        </li>
+        <li>
+          <a href="#">Jaquetas</a>
+        </li>
+        <li>
+          <a href="#">Moletons</a>
+        </li>
+        <li>
+          <a href="#">Adesivos</a>
+        </li>
+        <li>
+          <a href="#">Combos</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-top-information">
+      <h3>Informações</h3>
+      <ul>
+        <li>
+          <a href="#">Entre em contato</a>
+        </li>
+        <li>
+          <a href="#">Política de privacidade</a>
+        </li>
+        <li>
+          <a href="#">Pedidos e devoluções</a>
+        </li>
+        <li>
+          <a href="#">termos e condições</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-top-menu">
+      <h3>Menu</h3>
+      <ul>
+        <li>
+          <a href="#">Minha Conta</a>
+        </li>
+        <li>
+          <a href="#">Carrinho</a>
+        </li>
+        <li>
+          <a href="#">Lista de Desejos</a>
+        </li>
+        <li>
+          <a href="#">Rastrear Pedido</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-payments">
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-diners-club"></i>
+      <i class="fab fa-cc-amazon-pay"></i>
+      <i class="fab fa-cc-apple-pay"></i>
+    </div>
+    <p>Desenvolvido por <a href="https://www.instagram.com/_nicoolass/">@_nicoolass</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+  // Inicialize o carousel ao carregar a página
+  document.addEventListener('DOMContentLoaded', function () {
+    var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleSlidesOnly'), {
+      interval: 2000, // Defina o intervalo de transição em milissegundos (opcional)
+      wrap: true, // Permita a transição de volta ao primeiro slide após o último (opcional)
+    });
+  });
+  function openModal(imageSrcFront, imageSrcBack) {
+    var modal = document.getElementById('myModal');
+    var modalImageFront = document.getElementById('modalImageFront');
+    var modalImageBack = document.getElementById('modalImageBack');
+
+    modalImageFront.src = imageSrcFront;
+    modalImageBack.src = imageSrcBack;
+    modal.style.display = 'block';
+  }
+
+  function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  }
+
+  function openImageModal(imageSrc) {
+    var modal = document.getElementById('imageModal');
+    var modalImage = document.getElementById('modalImage');
+
+    modalImage.src = imageSrc;
+    modal.style.display = 'block';
+  }
+
+  function closeImageModal() {
+    var modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+  }
+
+  function flipCard(card) {
+    var flipCardInner = card.querySelector('.flip-card-inner');
+    flipCardInner.style.transform = 'rotateY(180deg)';
+  }
+
+  function resetFlip(card) {
+    var flipCardInner = card.querySelector('.flip-card-inner');
+    flipCardInner.style.transform = 'rotateY(0deg)';
+  }
+
+  $(document).ready(function() {
+      $('.btn-comprar').click(function() {
+          var nome = $(this).data('nome');
+          var preco = $(this).data('preco');
+          var imagemFront = $(this).data('imagem-front');
+          var imagemBack = $(this).data('imagem-back');
+
+          // Enviar os dados para a view Django via AJAX
+          $.ajax({
+              url: '/adicionar-produto/',
+              method: 'POST',
+              data: {
+                  nome: nome,
+                  preco: preco,
+                  imagem_front: imagemFront,
+                  imagem_back: imagemBack,
+                  csrfmiddlewaretoken: '{{ csrf_token }}'
+              },
+              success: function(response) {
+                  alert(response.message); // Exibe uma mensagem de sucesso
+                
+                  // Atualiza a quantidade no carrinho
+                  var qtyElement = $('.wishlist-container .qty');
+                  var currentQty = parseInt(qtyElement.text());
+                  qtyElement.text(currentQty + 1);
+              },
+              error: function(xhr, errmsg, err) {
+                  console.log(xhr.status + ": " + xhr.responseText);
+                  // Lida com erros, se houver
+              }
+          });
+      });
+  });
+
+
+</script>
