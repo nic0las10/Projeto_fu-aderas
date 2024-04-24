@@ -33,7 +33,8 @@ def adicionar_produto(request):
     else:
         return JsonResponse({'error': 'Método não permitido'}, status=405)
 
-
+def galeria(request):
+    return render ( request, 'galeria.html')
 
 
 

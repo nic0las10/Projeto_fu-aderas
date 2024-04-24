@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel Exemplo</title>
+  <!-- Link do Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!-- Carousel -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="height: 30em;">
+      <div class="carousel-item h-100 active"
+        style="background-image: url(/Imagens_Galeriaexemplos/Fotos_Mot/Foto_Duasmotos_Fuça.jpg); background-size: contain; background-repeat: no-repeat; background-position: center;">
+      </div>
+      <div class="carousel-item h-100"
+        style="background-image: url(/Imagens_Galeriaexemplos/Fotos_Mot/Moto_Branca_Capacete.jpg); background-size: contain; background-repeat: no-repeat; background-position: center;">
+      </div>
+      <div class="carousel-item h-100"
+        style="background-image: url(/Imagens_Galeriaexemplos/Fotos_Mot/Moto_Evento_Troféu.jpg); background-size: contain; background-repeat: no-repeat; background-position: center;">
+      </div>
+      <div class="carousel-item h-100"
+        style="background-image: url(/Imagens_Galeriaexemplos/Fotos/Chapeu_Camiseta.jpg); background-size: contain; background-repeat: no-repeat; background-position: center;">
+      </div>
+      <div class="carousel-item h-100"
+        style="background-image: url(/Imagens_Galeriaexemplos/Fotos/MotoPretaFrenteDeCasa.jpg); background-size: contain; background-repeat: no-repeat; background-position: center;">
+      </div>
+     
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- JavaScript do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var carousel = document.getElementById('carouselExampleAutoplaying');
+      var carouselInstance = new bootstrap.Carousel(carousel, {
+        interval: 4000, // Defina o intervalo de tempo em milissegundos (4 segundos)
+        wrap: true // Ativar looping
+      });
+
+      carousel.addEventListener('slid.bs.carousel', function () {
+        if (carouselInstance.isLast) {
+          carouselInstance.to(0); // Retorna à primeira imagem
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

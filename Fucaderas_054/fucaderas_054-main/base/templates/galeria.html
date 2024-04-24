@@ -1,21 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeria</title>
-  <link rel="shortcut icon" href="assets/image/raio.jpg" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/app.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria</title>
+    <link rel="shortcut icon" href="assets/image/raio.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'admin/css/app.css' %}" />
+  
 </head>
 
 <body>
@@ -53,10 +55,10 @@
       <nav>
         <ul>
           <li>
-            <a href="/index.html">Início</a>
+            <a href="http://127.0.0.1:8000">Início</a>
           </li>
           <li>
-            <a href="/Galeria/Produto/index.html">Produtos</a>
+            <a href="http://127.0.0.1:8000/produtos/">Produtos</a>
           </li>
           <li>
             <a href="/Galeria/Galeria.html">Galeria</a>
@@ -76,30 +78,30 @@
     <div class="products-grid-container">
       <div class="products-grid-card">
 
-        <img src="/Imagens_Galeriaexemplos/Fotos_Mot/Foto_Duasmotos_Fuça.jpg" alt="Produto 1" />
+        <img src="../static/admin/img/Fotos_Mot/Chapeu_Camiseta.jpg" alt="Produto 1" />
         <p class="category">Motos</p>
        
 
       </div>
       <div class="products-grid-card">
 
-        <img src="/Imagens_Galeriaexemplos/Fotos_Mot/Moto_Branca_Capacete.jpg" alt="Produto 2" />
+        <img src="../static/admin/img/Fotos_Mot/Foto_Duasmotos_Fuça.jpg" alt="Produto 2" />
         <p class="category">Motos</p>
-        <h3 class="product-name">150 do Nicola</h3>
+       
 
       </div>
       <div class="products-grid-card">
 
-        <img src="/Imagens_Galeriaexemplos/Fotos_Mot/Moto_Evento_Troféu.jpg" alt="Produto 3" />
+        <img src="../static/admin/img/Fotos_Mot/Moto_Branca_Capacete.jpg" alt="Produto 3" />
         <p class="category">Motos</p>
-        <h3 class="product-name">Cg do Gabriel</h3>
+      
 
       </div>
       <div class="products-grid-card">
 
-        <img src="/Imagens_Galeriaexemplos/Fotos/MotoFimdeTarde.jpg" alt="Produto 3" />
+        <img src="../static/admin/img/Fotos_Mot/Moto_Evento_Troféu.jpg" alt="Produto 3" />
         <p class="category">Motos</p>
-        <h3 class="product-name">Fuçada do Gabriel</h3>
+      
 
       </div>
 
@@ -120,7 +122,7 @@
     <div class="products-grid-container">
       <div class="products-grid-card">
         <video width="320" height="240" controls>
-          <source src="/Imagens_Galeriaexemplos/videonovo1.mp4" type="video/mp4">
+          <source src="../static/admin/img/Vídeos/videonovo1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
@@ -128,7 +130,7 @@
 
       <div class="products-grid-card">
         <video width="320" height="240" controls>
-          <source src="/Imagens_Galeriaexemplos/videonovo2.mp4" type="video/mp4">
+          <source src="../static/admin/img/Vídeos/videonovo2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
@@ -136,7 +138,7 @@
 
       <div class="products-grid-card">
         <video width="320" height="240" controls>
-          <source src="/Imagens_Galeriaexemplos/Vídeo do WhatsApp de 2023-11-22 à(s) 19.55.31_ae6e2406.mp4"
+          <source src="..//static/admin/img/Vídeos/Vídeo do WhatsApp de 2023-11-22 à(s) 19.55.31_ae6e2406.mp4"
             type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -155,48 +157,7 @@
   </div>
 
 
-  <div class="products-grid">
-    <h2 id="Eventos">Eventos</h2>
-    <div class="products-grid-container">
-      <div class="products-grid-card">
 
-        <img src="/Imagens_Galeriaexemplos/Fotos/MotoNoite.jpg" alt="Produto 1" />
-        <p class="category">Camisetas</p>
-        <h3 class="product-name">Camiseta Fuçadeiras_054</h3>
-
-      </div>
-      <div class="products-grid-card">
-
-        <img src="/Imagens_Galeriaexemplos/Fotos/MotoPretaFrenteDeCasa.jpg" alt="Produto 2" />
-        <p class="category">Motos</p>
-        <h3 class="product-name">Cg do Nicaneta</h3>
-
-      </div>
-      <div class="products-grid-card">
-
-        <img src="/Imagens_Galeriaexemplos/Fotos/VéioGrau.jpg" alt="Produto 3" />
-        <p class="category">Motos</p>
-        <h3 class="product-name">Cg do Gabriel</h3>
-
-      </div>
-      <div class="products-grid-card">
-
-        <img src="/Imagens_Galeriaexemplos/Fotos/MotoFimdeTarde.jpg" alt="Produto 3" />
-        <p class="category">Encontro</p>
-        <h3 class="product-name">Diamantino</h3>
-
-      </div>
-
-
-    </div>
-    <div>
-      <a href="/Galeria/eventos.html">
-        <button class="ver-mais-btn">Ver Mais</button>
-      </a>
-    </div>
-
-
-  </div>
 
 
 

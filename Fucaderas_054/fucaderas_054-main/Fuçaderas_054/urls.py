@@ -20,13 +20,14 @@ from django.urls import path
 
 from django.conf import settings
 from django.conf.urls.static import static
-from base.views import carrinho_compras, adicionar_produto, inicio, produtos
+from base.views import carrinho_compras, adicionar_produto, inicio, produtos,galeria
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("http://127.0.0.1:8000/", inicio),
+    path("", inicio),
     path("produtos/", produtos),
+    path("galeria/", galeria),
     path('carrinho/adicionar/', carrinho_compras, name='adicionar_produto_carrinho'),
     path('adicionar-produto/', adicionar_produto, name='adicionar_produto'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
